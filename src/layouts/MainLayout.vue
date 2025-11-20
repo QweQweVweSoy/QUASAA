@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="animated-bg">
     <q-header elevated>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
@@ -16,9 +16,19 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered class="bg-accent">
       <q-list>
-        <q-item-label header> ASA KA DAWG?</q-item-label>
+        <q-item-label
+          header
+          class="text-white text-h6 q-mb-md"
+          style="
+            background: rgba(0, 0, 0, 0.18);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+          "
+        >
+          Navigation
+        </q-item-label>
       </q-list>
     </q-drawer>
 
@@ -43,3 +53,20 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+
+<style lang="scss">
+.animated-bg {
+  background: repeating-linear-gradient(45deg, #65a046, #65a046 10px, #398411 10px, #398411 20px);
+  background-size: auto auto;
+  animation: bg-a 2s linear infinite;
+}
+
+@keyframes bg-a {
+  100% {
+    background-position: 0 0;
+  }
+  0% {
+    background-position: 0px 115px;
+  }
+}
+</style>

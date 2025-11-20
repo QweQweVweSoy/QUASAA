@@ -12,14 +12,19 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary: #3b9709;
-$secondary: #26a69a;
-$accent: #9c27b0;
+$primary: #58cc1a;
+$accent: #65a046;
 
 $dark: #1d1d1d;
 $dark-page: #121212;
 
-$positive: #21ba45;
-$negative: #c10015;
-$info: #31ccec;
-$warning: #f2c037;
+@keyframes bg-a {
+  0%,
+  50%,
+  100% {
+    background-position: 100% 0;
+  }
+  25% {
+    background-position: 0 100%;
+  }
+}
